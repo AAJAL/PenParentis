@@ -14,6 +14,15 @@ import {FacebookPage} from '../pages/facebook/facebook';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+/*
+<ion-menu [content]="mycontent">
+  <ion-content>
+    <ion-list>
+    ...
+    </ion-list>
+  </ion-content>
+</ion-menu>
+*/
 @NgModule({
   declarations: [
     MyApp,
