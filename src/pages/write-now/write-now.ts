@@ -13,13 +13,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-write-now',
   templateUrl: 'write-now.html',
 })
-export class WriteNowPage {
+export class WriteNowPage {//start export class WriteNowPage
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
 
-  ionViewDidLoad() {
+  }//end Constructor
+
+  ionViewDidLoad() {//start ionViewDidLoad
     console.log('ionViewDidLoad WriteNowPage');
-  }
+  }//end ionViewDidLoad
 
-}
+}//end export class WriteNowPage

@@ -25,21 +25,30 @@
 <img src="assets/imgs/membership.png" alt="membership" class="memberPic">
 <p style="padding-left:10px; padding-bottom:200px; color:white;">Membership</p>
 -->
+
+<!-- Date Display -->
+<div style="padding-top:5px; padding-left: 130px; padding-bottom: 0px; color:white">
+  <ion-label>
+    {{formattedDate}}
+  </ion-label>
+</div>
+<!-- Date Display -->
+
 <!-- top row -->
 <div class="row">
-  <div style="padding-top: 30px; padding-left: 45px"><!-- Membership button -->
+  <div style="padding-top: 20px; padding-left: 45px"><!-- Membership button -->
     <button ion-button color="light" ion-button round=200% style="width:60px; height:60px;" (click)="goToMembership()">
       <img src="assets/imgs/membership.png" alt="Membership">
     </button>
     <pre style="color:white">Membership </pre>
   </div>
-  <div style="padding-top: 30px; padding-left: 10px"><!-- Salons button -->
+  <div style="padding-top: 20px; padding-left: 10px"><!-- Salons button -->
     <button ion-button color="light" ion-button round=200% style="width:60px; height:60px;" (click)="goToSalons()">
       <img src="assets/imgs/Salons.png" alt="Salons">
     </button>
     <pre style="color:white">Salons </pre>
   </div>
-  <div style="padding-top: 30px; padding-left: 30px"><!-- Donate button -->
+  <div style="padding-top: 20px; padding-left: 30px"><!-- Donate button -->
     <button ion-button color="light" ion-button round=200% style="width:60px; height:60px;" (click)="goToDonate()">
       <img src="assets/imgs/donateImage.png" alt="Donate">
     </button>
@@ -74,10 +83,12 @@
 <div class="row">
   <!-- Facebook -->
   <div style="padding-left:50px; padding-top:10px">
-    <button ion-button color="light" ion-button round=200% style="width:60px; height:60px" (click)="goToFacebook()">
-    <ion-icon name="logo-facebook"></ion-icon>
-    </button>
-    <pre style="color:white">Facebook </pre>
+  <!--  <button ion-button color="light" ion-button round=200% style="width:60px; height:60px" (click)="goToFacebook()">-->
+  <button ion-button color="light" ion-button round=200% style="width:60px; height:60px">
+      <ion-icon name="logo-facebook"></ion-icon>
+  </button>
+  <pre style="color:white"> Facebook </pre>
+
   </div>
   <!-- Twitter -->
   <div style="padding-left:15px; padding-top:10px">

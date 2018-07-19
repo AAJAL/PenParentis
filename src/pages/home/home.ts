@@ -13,6 +13,7 @@ import {FacebookPage} from '../facebook/facebook';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  formattedDate;
 
   goToGoals() {
     this.navCtrl.push(GoalsPage, {
@@ -49,9 +50,21 @@ export class HomePage {
 
     })
   }
+  getFormattedDate(){
+    var dateObj = new Date();
+    var year = dateObj.getFullYear().toString()
+    var month = dateObj.getMonth().toString()
+    var date = dateObj.getDate().toString()
+    var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December']
+    //this.formattedDate = year + month + date;
+    this.formattedDate = monthArray[month]+" "+date+", "+year;
 
+  }
+  currentDate;
   constructor(public navCtrl: NavController) {
-
+    this.currentDate = new Date();
+    this.getFormattedDate()
   }
 
   slider=[
