@@ -6,8 +6,11 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>WriteNow</ion-title>
+  <ion-navbar color="royalblue">
+    <ion-title>WRITE NOW</ion-title>
+    <button ion-button (click)="add()" style="float:right">
+    <ion-icon ios="ios-add" md="md-add" style="color:white; float:right;"></ion-icon>
+  </button>
   </ion-navbar>
 
 </ion-header>
@@ -17,9 +20,24 @@
 <!--
 <button style="background-color:primary; color: white">Email</button>
 -->
-<ion-label>
-  {{currentDate}}
-</ion-label>
 
+
+
+ <ion-list>
+     <ion-item-sliding *ngFor="let t of todos">
+         <ion-item>
+             {{t}}
+         </ion-item>
+
+         <ion-item-options side="right">
+             <button ion-button color="danger" (click)="delete(t)">
+                 <ion-icon name="trash"></ion-icon> Delete
+             </button>
+         </ion-item-options>
+     </ion-item-sliding>
+ </ion-list>
+ <button ion-button (click)="goToCountdown()">Timer</button>
+ <button ion-button full (click)="delete()">Delete</button>
+ <button ion-button (click)="goToUserWrites()">Go to docs</button>
 
 </ion-content>

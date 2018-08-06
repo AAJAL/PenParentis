@@ -8,6 +8,7 @@ import {DonatePage} from '../donate/donate';
 import {ResourcesPage} from '../resources/resources';
 import {FacebookPage} from '../facebook/facebook';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -50,6 +51,7 @@ export class HomePage {
 
     })
   }
+
   getFormattedDate(){
     var dateObj = new Date();
     var year = dateObj.getFullYear().toString()
