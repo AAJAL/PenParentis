@@ -13,44 +13,22 @@
 </ion-header>
 
 
-<ion-content>
-  <ion-card *ngIf="timer">
-    <ion-item class="no-bottom-border item">
-        <button ion-button *ngIf="timeInSeconds && timeInSeconds > 0" large full clear class="timer-button timer-text">{{timer.displayTime}}</button>
-    </ion-item>
-    <ion-item class="no-bottom-border" *ngIf="timeInSeconds && timeInSeconds > 0">
-        <button ion-button icon-left clear color="danger" small (click)="initTimer()" item-left *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">
-            <ion-icon name="refresh"></ion-icon>
-            Reset
-        </button>
-        <button ion-button icon-left clear small color="primary" (click)="pauseTimer()" item-right *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">
-            <ion-icon name="pause"></ion-icon>
-            Pause
-        </button>
-        <button ion-button icon-left clear small color="primary" (click)="resumeTimer()" item-right *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">
-            <ion-icon name="play"></ion-icon>
-            Resume
-        </button>
-        <button ion-button icon-left clear small color="primary" (click)="startTimer()" item-right *ngIf="!timer.hasStarted">
-            <ion-icon name="play"></ion-icon>
-            Start
-        </button>
-    </ion-item>
-
-</ion-card>
-<!--
-<timer #timer timeInSeconds="60"></timer>
+<ion-content padding>
+<!--  <timer end-time="{{endTime}}">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>-->
+<!--  <button ion-button type="button" color="light">Cancel</button> -->
+<div class="panel panel-default">
+  <!--
+  <div class="panel-heading">
+    <h2 class="panel-title">Countdown timer</h2>
+  </div>
 -->
-
-<style>
-  .timer-button {
-    font-size: 5rem !important;
-    height: 1em !important;
-  }
-
-  .no-bottom-border.item .item-inner {
-      border-bottom: none !important;
-  }
-</style>
-
+  <div class="panel-body">
+    <div>
+      <h1 style="text-align:center">{{countdown}}</h1>
+    </div>
+    <div>
+      <!--<button (click)="startCountdownTimer()" class="btn btn-success">Start</button> -->
+    </div>
+  </div>
+</div>
 </ion-content>

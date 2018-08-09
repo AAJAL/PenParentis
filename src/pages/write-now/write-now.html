@@ -17,27 +17,26 @@
 
 
 <ion-content padding>
-<!--
-<button style="background-color:primary; color: white">Email</button>
--->
+  <ion-item>
+          <ion-input [(ngModel)]="todo" placeholder="Insert some todo here here" type="text"></ion-input>
+      </ion-item>
 
+    <!--  <button ion-button full (click)="add()">ADD</button>-->
 
+      <ion-list>
+          <ion-item-sliding *ngFor="let t of todos">
+              <ion-item>
+                  {{t}}
+              </ion-item>
 
- <ion-list>
-     <ion-item-sliding *ngFor="let t of todos">
-         <ion-item>
-             {{t}}
-         </ion-item>
+            <!--  <ion-item-options side="right">
+                  <button ion-button color="danger" (click)="delete(t)">
+                      Delete<ion-icon name="trash"></ion-icon>
+                  </button>
+              </ion-item-options> -->
+          </ion-item-sliding>
+          <button ion-button color="danger" (click)="delete(t)">Delete</button>
 
-         <ion-item-options side="right">
-             <button ion-button color="danger" (click)="delete(t)">
-                 <ion-icon name="trash"></ion-icon> Delete
-             </button>
-         </ion-item-options>
-     </ion-item-sliding>
- </ion-list>
- <button ion-button (click)="goToCountdown()">Timer</button>
- <button ion-button full (click)="delete()">Delete</button>
- <button ion-button (click)="goToUserWrites()">Go to docs</button>
+      </ion-list>
 
 </ion-content>

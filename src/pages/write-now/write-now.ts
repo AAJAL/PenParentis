@@ -17,10 +17,9 @@ import 'rxjs/add/observable/interval'
   templateUrl: 'write-now.html',
 })
 export class WriteNowPage {//start export class WriteNowPage
-  timerVar;
-  timerVal;
   todos: string[] = [];
-  todo: string;
+    todo: string;
+
   //let start: boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {//start Constructor
   //  this.startTimer();
@@ -31,21 +30,17 @@ export class WriteNowPage {//start export class WriteNowPage
     console.log('ionViewDidLoad WriteNowPage');
   }//end ionViewDidLoad
 
+add() {
+       this.todos.push(this.todo);
+       this.todo = "";
+   }
 
-
-  stopTimer(){
-  this.timerVar.unsubscribe()
-}//end stopTimer
-add() {//start add
-      this.todos.push(this.todo);
-      this.todo = "";
-  }//end add
-delete(item) {//start delete
-     var index = this.todos.indexOf(item, 0);
-     if (index > -1) {
-         this.todos.splice(index, 1);
-     }
- }//end delete
+   delete(item) {
+       var index = this.todos.indexOf(item, 0);
+       if (index > -1) {
+           this.todos.splice(index, 1);
+       }
+   }
  goToUserWrites() {
     this.navCtrl.push(UserWritesPage);
 

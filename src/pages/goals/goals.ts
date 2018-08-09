@@ -45,6 +45,7 @@ export class GoalsPage {
      })
    }
    openTimerPage(){
+     
      this.navCtrl.push(TimerPage);
    }
 
