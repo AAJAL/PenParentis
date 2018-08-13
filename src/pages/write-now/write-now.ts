@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {UserWritesPage} from '../user-writes/user-writes';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval'
+import {BlankdocPage} from '../blankdoc/blankdoc'
 
 /**
  * Generated class for the WriteNowPage page.
@@ -44,6 +45,9 @@ add() {
  goToUserWrites() {
     this.navCtrl.push(UserWritesPage);
 
+}
+openblankOpen() {
+  this.navCtrl.push(BlankdocPage);
 }
 
 }//end export class WriteNowPage

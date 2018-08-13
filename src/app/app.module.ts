@@ -10,7 +10,7 @@ import {SalonsPage} from '../pages/salons/salons';
 import {DonatePage} from '../pages/donate/donate';
 import {ResourcesPage} from '../pages/resources/resources';
 import {FacebookPage} from '../pages/facebook/facebook';
-import {CountdownTimerPage} from '../pages/countdown-timer/countdown-timer';
+import {BlankdocPage} from '../pages/blankdoc/blankdoc';
 import {TimerPage} from '../pages/timer/timer';
 
 import { MyApp } from './app.component';
@@ -36,8 +36,8 @@ import { HomePage } from '../pages/home/home';
     DonatePage,
     ResourcesPage,
     FacebookPage,
-    CountdownTimerPage,
-    TimerPage
+    TimerPage,
+    BlankdocPage
   ],
   imports: [
     BrowserModule,
@@ -54,8 +54,8 @@ import { HomePage } from '../pages/home/home';
     DonatePage,
     ResourcesPage,
     FacebookPage,
-    CountdownTimerPage,
-    TimerPage
+    TimerPage,
+    BlankdocPage
   ],
   providers: [
     StatusBar,
